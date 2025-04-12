@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bree Marketing Digital</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+  <!-- Police Google Fonts pour améliorer la typographie -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <nav class="navbar">
-      <ul>
+      <!-- Menu responsive -->
+      <div class="menu-toggle" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <ul class="nav-list" id="nav-list">
         <li><a href="#">Réserver</a></li>
         <li><a href="#">Nos services</a></li>
         <li><a href="#">Nos formations</a></li>
-      </ul>
-      <h1 class="logo">Bree Marketing Digital</h1>
-      <ul>
         <li><a href="#">Avis clients</a></li>
         <li><a href="#">Contactez-nous</a></li>
       </ul>
+      
+      <h1 class="logo">Bree Marketing Digital</h1>
     </nav>
   </header>
 
@@ -29,8 +37,16 @@
       <a href="#" class="btn">RÉSERVER</a>
     </section>
     <section class="right">
-      <img src="logos.jpg" alt="Logo Bree Marketing Digital" />
+      <img src="logos.jpg" alt="Logo Bree Marketing Digital" loading="lazy">
     </section>
   </main>
+
+  <!-- Ajout d'un petit JavaScript pour le menu mobile -->
+  <script>
+    document.getElementById('mobile-menu').addEventListener('click', function() {
+      this.classList.toggle('active');
+      document.getElementById('nav-list').classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
